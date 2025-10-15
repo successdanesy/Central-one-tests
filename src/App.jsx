@@ -7,7 +7,7 @@ import {About} from "./pages/About.jsx";
 
 function App() {
   return (
-      <div className={` w-full h-full m-0`}>
+      <div className={` w-full h-full m-0 `}>
         <Header />
           <Routes >
              <Route path={`/`} element={<Home />}/>
