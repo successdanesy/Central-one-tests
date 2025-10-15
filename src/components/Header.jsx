@@ -21,7 +21,7 @@ export default function Header() {
             <header className="relative w-full">
                 <div className="bg-white z-20 font-[Outfit] py-4 px-4 lg:py-5 lg:px-5 content-center items-center justify-between flex flex-row w-full">
                     <NavLink to={`/`}>
-                        <div className="hover:cursor-pointer w-32 sm:w-36 lg:w-1/4">
+                        <div className="hover:cursor-pointer w-32 sm:w-36 lg:w-3/4">
                             <img src={`${Images.logo_1}`} alt="Logo"/>
                         </div>
                     </NavLink>
@@ -40,7 +40,7 @@ export default function Header() {
                             ))}
                         </div>
 
-                        <button className={`bg-[#0c4d69] text-base lg:text-lg font-[500] hover:cursor-pointer text-white px-4 py-2.5 rounded-lg transition-all hover:bg-[#0a3d54]`}>
+                        <button className={`bg-[#0c4d69] text-base lg:text-lg font-[500] hover:cursor-pointer text-white px-4 py-1.5 rounded-lg transition-all hover:bg-[#0a3d54]`}>
                             Contact Us
                         </button>
                     </div>
@@ -60,7 +60,7 @@ export default function Header() {
                 </div>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                <div className={`lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-50' : 'opacity-0 pointer-events-none'}`}
                      onClick={toggleMobileMenu}
                 ></div>
 
