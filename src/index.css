@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SF_PRO_DISPLAY/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --base: #1B1F23;
+    --basse: #bcd1dc;
+    --translucentbg: rgba(12, 77, 105, 0.73);
+    --translucentbg: #001a2c;
+
+}
+
+.reasoning-title {
+    margin-bottom: 3rem;
+    color: black;
+    font-family: "Sora", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.reasoning-card {
+    background: transparent;
+    max-width: 400px;
+    padding: 1rem;
+    display: flex;
+}
+
+
+.reasoning-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.reasoning-card img {
+    position: relative;
+    top: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.reasoning-card p {
+    font-size: 0.95rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+}
+
+.engagement-icon {
+    /*font-size: 3rem;*/
+    color: #6C63FF;
+    margin-bottom: 1rem;
+    /*width: 10rem;*/
+    /*height: 10rem;*/
+}
+
+
+
+
+
+/*.scroll-content {*/
+/*    display: inline-block;*/
+/*    white-space: nowrap;*/
+/*    animation: scroll-left 20s linear infinite;*/
+/*    animation-play-state: running;*/
+
+/*}*/
+
+
+
+.animate-scroll {
+    animation: scroll-left 20s linear infinite;
+}
+.animate-scroll {
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
+
