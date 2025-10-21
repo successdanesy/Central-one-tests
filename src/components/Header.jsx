@@ -21,7 +21,7 @@ export default function Header() {
             <header className="relative w-full">
                 <div className="bg-white z-20 font-[Outfit] py-4 px-4 lg:py-5 lg:px-5 content-center items-center justify-between flex flex-row w-full">
                     <NavLink to={`/`}>
-                        <div className="hover:cursor-pointer w-32 sm:w-36 lg:w-3/4">
+                        <div className="hover:cursor-pointer w-32 sm:w-36 lg:w-2/4">
                             <img src={`${Images.logo_1}`} alt="Logo"/>
                         </div>
                     </NavLink>
