@@ -6,36 +6,123 @@ export default function Home() {
     return (
         <div className={`m-auto relative bg-[#eef2fb]`}>
             {/*Hero Section*/}
-            <section className={`m-auto relative min-h-[500px] sm:min-h-[600px] lg:h-[700px]`}>
-                {/*<img src={`${Images.bg_image2}`} className="absolute inset-0 w-full h-full object-cover" alt=""/>*/}
-                <div className="absolute inset-0 bg-[#0c4d69]/90 to-[#0c4d69]/70"></div>
+            <section className={`m-auto relative min-h-[600px] lg:min-h-[750px] overflow-hidden`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a] via-[#0c4d69] to-[#0a3d54]"></div>
 
-                <div className={`max-w-6xl h-full content-center px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 lg:py-20 relative z-10`}>
-                    <div className={`justify-center`}>
-                        <h2 className={`text-[#90EE90] text-sm sm:text-base lg:text-[17px] font-[Outfit] tracking-widest font-[600] mb-3 sm:mb-4`}>
-                            TRUSTED BY FORWARD-THINKING COMPANIES
-                        </h2>
+                {/* Decorative elements */}
+                <div className="absolute top-20 right-20 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 left-20 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
 
-                        <div className={`mb-4 sm:mb-6`}>
-                            <span className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-[Outfit] leading-tight block`}>
-                                Transform Your <span className={`font-bold`}>Digital Vision</span>
-                                <br className="hidden sm:block" /> Into Reality
-                            </span>
-                        </div>
+                <div className={`max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative z-10`}>
+                    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center`}>
+                        {/* Left Content */}
+                        <div className={`space-y-6 lg:pr-8`}>
+                            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                                <div className="w-2 h-2 bg-[#90EE90] rounded-full animate-pulse"></div>
+                                <span className={`text-[white] text-xs sm:text-sm font-[Outfit] tracking-wide font-[600]`}>
+                                    TRUSTED BY FORWARD-THINKING COMPANIES
+                                </span>
+                            </div>
 
-                        <div className={`mb-4 sm:mb-6`}>
-                            <p className={`text-base sm:text-lg lg:text-xl text-white/95 font-[500] font-[Outfit] max-w-full sm:max-w-[600px] lg:w-[650px] leading-relaxed`}>
+                            <div>
+                                <h1 className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white font-[Outfit] font-bold leading-tight mb-4`}>
+                                    Transform Your<br />
+                                    Digital <span className="bg-gradient-to-r from-[#90EE90] to-[#60d060] bg-clip-text text-transparent">
+                                         Vision
+                                    </span><br />
+                                    Into <span className="bg-gradient-to-r from-[#90EE90] to-[#60d060] bg-clip-text text-transparent">
+                                         Reality
+                                    </span>
+                                </h1>
+                            </div>
+
+                            <p className={`text-base sm:text-lg lg:text-xl text-white/90 font-[Outfit] max-w-xl leading-relaxed`}>
                                 We partner with ambitious businesses to design, develop, and deploy innovative software solutions that drive <span className={`text-[#90EE90] font-semibold`}>measurable growth</span> and competitive advantage.
                             </p>
+
+                            <div className={`flex flex-wrap gap-4 pt-4`}>
+                                <button className={`group bg-white text-[#0c4d69] text-base sm:text-lg font-[600] hover:cursor-pointer font-[Outfit] px-6 sm:px-8 py-3 rounded-full transition-all hover:bg-[#90EE90] hover:shadow-2xl hover:scale-105 flex items-center gap-2`}>
+                                    Start Your Project
+                                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                                <button className={`border-2 border-white/50 text-white text-base sm:text-lg font-[600] hover:cursor-pointer font-[Outfit] px-6 sm:px-8 py-3 rounded-full transition-all hover:bg-white/10 hover:border-white flex items-center gap-2`}>
+                                    View Our Work
+                                </button>
+                            </div>
                         </div>
 
-                        <div className={`flex flex-wrap gap-4 mb-3`}>
-                            <button className={`bg-white text-[#0c4d69] text-base sm:text-lg font-[600] hover:cursor-pointer font-[Outfit] px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all hover:bg-gray-100 hover:shadow-lg`}>
-                                Start Your Project
-                            </button>
-                            <button className={`border-2 border-white text-white text-base sm:text-lg font-[600] hover:cursor-pointer font-[Outfit] px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all hover:bg-white/10`}>
-                                View Our Work
-                            </button>
+                        {/* Right Dashboard Card */}
+                        <div className={`hidden lg:block relative`}>
+                            <div className="bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-3xl p-8 shadow-2xl border border-white/10 backdrop-blur-xl">
+                                {/* Header */}
+                                <div className="flex items-center justify-between mb-6">
+                                    <h3 className="text-white font-[Outfit] text-2xl font-semibold">Project Dashboard</h3>
+                                    <div className="flex items-center gap-1">
+                                        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                        <span className="text-green-400 text-sm font-[Outfit]">Live</span>
+                                    </div>
+                                </div>
+
+                                {/* Stats Grid */}
+                                <div className="grid grid-cols-2 gap-4 mb-6">
+                                    <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-5 border border-blue-400/30">
+                                        <div className="text-5xl font-bold text-white font-[Outfit] mb-1">50+</div>
+                                        <div className="text-gray-300 text-sm font-[Outfit]">Projects Completed</div>
+                                    </div>
+                                    <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-5 border border-green-400/30">
+                                        <div className="text-5xl font-bold text-white font-[Outfit] mb-1">99.9%</div>
+                                        <div className="text-gray-300 text-sm font-[Outfit]">Success Rate</div>
+                                    </div>
+                                </div>
+
+                                {/* Progress Bars */}
+                                <div className="space-y-4 mb-6">
+                                    <div>
+                                        <div className="flex justify-between mb-2">
+                                            <span className="text-white text-sm font-[Outfit]">Development</span>
+                                            <span className="text-blue-400 text-sm font-[Outfit]">95%</span>
+                                        </div>
+                                        <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                                            <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full" style={{width: '95%'}}></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between mb-2">
+                                            <span className="text-white text-sm font-[Outfit]">Deployment</span>
+                                            <span className="text-green-400 text-sm font-[Outfit]">88%</span>
+                                        </div>
+                                        <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                                            <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" style={{width: '88%'}}></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between mb-2">
+                                            <span className="text-white text-sm font-[Outfit]">Testing</span>
+                                            <span className="text-purple-400 text-sm font-[Outfit]">92%</span>
+                                        </div>
+                                        <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                                            <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style={{width: '92%'}}></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Active Team */}
+                                <div className="flex items-center justify-between pt-4 border-t border-gray-700">
+                                    <div>
+                                        <div className="text-gray-400 text-xs font-[Outfit] mb-1">Active Team</div>
+                                        <div className="flex -space-x-2">
+                                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-gray-800 flex items-center justify-center text-white text-xs font-bold">A</div>
+                                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-gray-800 flex items-center justify-center text-white text-xs font-bold">B</div>
+                                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-gray-800 flex items-center justify-center text-white text-xs font-bold">C</div>
+                                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-gray-800 flex items-center justify-center text-white text-xs">+2</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>

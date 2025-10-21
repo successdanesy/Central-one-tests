@@ -3,16 +3,20 @@ import {Images} from "../components/images.jsx";
 export const navLinks = [
 
     {
-        name: 'About Us',
-        link: '/about-us',
+        name: 'Home',
+        link: '/',
+    },
+    {
+        name: 'About',
+        link: '/about',
     },
     {
         name: 'Services',
-        link: '/services',
+        link: '/',
     },
     {
-        name: 'Portfolio',
-        link: '/portfolio',
+        name: 'Products',
+        link: '/',
     },
 ];
 
