@@ -7,31 +7,34 @@ export default function Home() {
         <div className={`m-auto relative bg-[#eef2fb]`}>
             {/*Hero Section*/}
             <section className={`m-auto relative min-h-[500px] sm:min-h-[600px] lg:h-[700px]`}>
-                <img src={`${Images.bg_image2}`} className="absolute inset-0 w-full h-full object-cover" alt=""/>
+                {/*<img src={`${Images.bg_image2}`} className="absolute inset-0 w-full h-full object-cover" alt=""/>*/}
+                <div className="absolute inset-0 bg-[#0c4d69]/90 to-[#0c4d69]/70"></div>
 
-                <div className={`max-w-6xl h-full content-center px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 lg:py-20`}>
-                    <div className={`justify-center relative`}>
-                        <h2 className={`text-[#0c4d69] text-sm sm:text-base lg:text-[17px] font-[Outfit] tracking-widest font-[600] mb-3 sm:mb-4`}>
-                            A TRUSTED COMPANY
+                <div className={`max-w-6xl h-full content-center px-4 sm:px-8 md:px-12 lg:px-20 py-8 sm:py-12 lg:py-20 relative z-10`}>
+                    <div className={`justify-center`}>
+                        <h2 className={`text-[#90EE90] text-sm sm:text-base lg:text-[17px] font-[Outfit] tracking-widest font-[600] mb-3 sm:mb-4`}>
+                            TRUSTED BY FORWARD-THINKING COMPANIES
                         </h2>
 
                         <div className={`mb-4 sm:mb-6`}>
-                            <span className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[var(--base)] font-[Outfit] leading-tight block`}>
-                                Next-Gen <span className={`font-semibold`}>Software</span>
-                                <br className="hidden sm:block" /> Services to
-                                <br /> Businesses.
+                            <span className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white font-[Outfit] leading-tight block`}>
+                                Transform Your <span className={`font-bold`}>Digital Vision</span>
+                                <br className="hidden sm:block" /> Into Reality
                             </span>
                         </div>
 
                         <div className={`mb-4 sm:mb-6`}>
-                            <p className={`border-l-4 text-sm sm:text-base lg:text-md font-[500] font-[Montserrat] px-3 border-[#0c4d69] max-w-full sm:max-w-[500px] lg:w-[550px]`}>
-                                We create innovative digital solutions that help business grow, scale <span className={`text-[#669140]`}>and succeed.</span>
+                            <p className={`text-base sm:text-lg lg:text-xl text-white/95 font-[500] font-[Outfit] max-w-full sm:max-w-[600px] lg:w-[650px] leading-relaxed`}>
+                                We partner with ambitious businesses to design, develop, and deploy innovative software solutions that drive <span className={`text-[#90EE90] font-semibold`}>measurable growth</span> and competitive advantage.
                             </p>
                         </div>
 
-                        <div className={`mb-3`}>
-                            <button className={`bg-[#0c4d69] text-base sm:text-lg font-[500] hover:cursor-pointer font-[Outfit] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all hover:bg-[#0a3d54]`}>
-                                Contact Us
+                        <div className={`flex flex-wrap gap-4 mb-3`}>
+                            <button className={`bg-white text-[#0c4d69] text-base sm:text-lg font-[600] hover:cursor-pointer font-[Outfit] px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all hover:bg-gray-100 hover:shadow-lg`}>
+                                Start Your Project
+                            </button>
+                            <button className={`border-2 border-white text-white text-base sm:text-lg font-[600] hover:cursor-pointer font-[Outfit] px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all hover:bg-white/10`}>
+                                View Our Work
                             </button>
                         </div>
                     </div>
@@ -41,7 +44,7 @@ export default function Home() {
             {/*Engagement Models Section*/}
             <section className="relative mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 text-center font-[Poppins]">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl lg:pt-10 font-bold text-[var(--base)] mb-6 sm:mb-8 lg:mb-12 text-center px-4">
-                    Our Pillars of Excellence
+                    Built on Three Core Pillars
                 </h2>
 
                 <div className="gap-4 sm:gap-6 lg:gap-8 m-auto max-w-7xl justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -50,12 +53,9 @@ export default function Home() {
                             key={index}
                             className="group relative bg-white/70 backdrop-blur-sm rounded-2xl border border-white/30 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-0.5 p-6 sm:p-8"
                         >
-                            <img
-                                src={model.icon}
-                                loading="lazy"
-                                alt={`${model.title} icon`}
-                                className="mx-auto mb-4 w-32 sm:w-40 lg:w-48"
-                            />
+                            <div className="w-16 h-16 bg-gradient-to-br from-[#0c4d69] to-[#2a919f] rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+                                <span className="text-3xl text-white font-bold">{index + 1}</span>
+                            </div>
                             <div>
                                 <h3 className="text-lg sm:text-xl font-bold text-[#2a919f] mb-3 sm:mb-4 font-[Outfit] transition-colors duration-300 group-hover:text-[#1b4d58]">
                                     {model.title}
@@ -69,62 +69,125 @@ export default function Home() {
                 </div>
             </section>
 
-            {/*Why Choose Us Section*/}
+            {/*Services Overview Section*/}
             <section className={`w-full bg-[#0c4d69] py-12 sm:py-16 lg:py-20 mb-16 sm:mb-24 lg:mb-32`}>
                 <div className={`m-auto text-center px-4 mb-8 sm:mb-12`}>
-                    <span className={`capitalize text-[#bcd1dc] font-[Poppins] text-sm sm:text-base`}>why choose us</span>
+                    <span className={`capitalize text-[#bcd1dc] font-[Poppins] text-sm sm:text-base`}>what we offer</span>
                     <h2 className={`text-3xl sm:text-4xl lg:text-5xl text-white leading-tight font-[Outfit] font-[700] mt-2`}>
-                        Design the Concept <br /> of Your Business Flows
+                        Comprehensive Digital <br /> Solutions for Your Business
                     </h2>
                 </div>
 
                 <div className={`m-auto mb-6 sm:mb-8 lg:mb-12 px-4`}>
                     <div className={`grid max-w-6xl m-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8`}>
-                        {[1, 2, 3, 4].map((item) => (
-                            <div key={item} className={`flex border border-[#bcd1dc] py-8 sm:py-12 lg:py-16 px-4 sm:px-5 font-[Outfit] flex-col`}>
-                                <h3 className={`text-white font-[500] text-xl sm:text-2xl lg:text-[25px] mb-2`}>Product Design</h3>
-                                <p className={`text-[#bcd1dc] mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base`}>
-                                    Our product design service let's you prototype, test and validate your ideas
-                                </p>
-                                <a className={`text-[#bcd1dc] hover:underline cursor-pointer text-sm sm:text-base`}>Learn More</a>
-                            </div>
-                        ))}
+                        <div className={`flex border border-[#bcd1dc] py-8 sm:py-12 lg:py-16 px-4 sm:px-5 font-[Outfit] flex-col hover:bg-white/5 transition-all`}>
+                            <h3 className={`text-white font-[500] text-xl sm:text-2xl lg:text-[25px] mb-2`}>Web Development</h3>
+                            <p className={`text-[#bcd1dc] mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base`}>
+                                Build responsive, high-performance websites and web applications tailored to your business needs.
+                            </p>
+                            <a href="#services" className={`text-[#bcd1dc] hover:underline cursor-pointer text-sm sm:text-base`}>Learn More →</a>
+                        </div>
+
+                        <div className={`flex border border-[#bcd1dc] py-8 sm:py-12 lg:py-16 px-4 sm:px-5 font-[Outfit] flex-col hover:bg-white/5 transition-all`}>
+                            <h3 className={`text-white font-[500] text-xl sm:text-2xl lg:text-[25px] mb-2`}>Mobile Apps</h3>
+                            <p className={`text-[#bcd1dc] mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base`}>
+                                Create intuitive mobile experiences for iOS and Android that users love.
+                            </p>
+                            <a href="#services" className={`text-[#bcd1dc] hover:underline cursor-pointer text-sm sm:text-base`}>Learn More →</a>
+                        </div>
+
+                        <div className={`flex border border-[#bcd1dc] py-8 sm:py-12 lg:py-16 px-4 sm:px-5 font-[Outfit] flex-col hover:bg-white/5 transition-all`}>
+                            <h3 className={`text-white font-[500] text-xl sm:text-2xl lg:text-[25px] mb-2`}>UI/UX Design</h3>
+                            <p className={`text-[#bcd1dc] mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base`}>
+                                Design user-centered interfaces that combine aesthetics with seamless functionality.
+                            </p>
+                            <a href="#services" className={`text-[#bcd1dc] hover:underline cursor-pointer text-sm sm:text-base`}>Learn More →</a>
+                        </div>
+
+                        <div className={`flex border border-[#bcd1dc] py-8 sm:py-12 lg:py-16 px-4 sm:px-5 font-[Outfit] flex-col hover:bg-white/5 transition-all`}>
+                            <h3 className={`text-white font-[500] text-xl sm:text-2xl lg:text-[25px] mb-2`}>IT Consulting</h3>
+                            <p className={`text-[#bcd1dc] mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base`}>
+                                Strategic technology guidance to optimize your digital infrastructure and processes.
+                            </p>
+                            <a href="#services" className={`text-[#bcd1dc] hover:underline cursor-pointer text-sm sm:text-base`}>Learn More →</a>
+                        </div>
                     </div>
                 </div>
 
-                <div className={`m-auto px-4`}>
-                    <div className={`grid max-w-6xl m-auto grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8`}>
-                        {[Images.grid_image2, Images.grid_image1].map((img, idx) => (
-                            <div
-                                key={idx}
-                                className={`flex border border-[#bcd1dc] py-6 sm:py-8 px-4 sm:px-5 font-[Outfit] flex-col min-h-[250px] sm:min-h-[300px]`}
-                                style={{
-                                    backgroundImage: `url(${img})`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center'
-                                }}
-                            >
-                                <h3 className={`text-white font-[500] text-2xl sm:text-3xl lg:text-[35px] mb-1`}>15+</h3>
-                                <span className={`capitalize text-white font-[Poppins] text-sm sm:text-base`}>countries worldwide</span>
-                                <p className={`text-white mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base`}>
-                                    Our product design service let's you prototype, test and validate your ideas
+
+                <div className="m-auto px-4">
+                    <div className="grid max-w-6xl m-auto grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                        {/* === CARD 1 === */}
+                        <div className="relative overflow-hidden flex flex-col border border-[#bcd1dc] py-6 sm:py-8 px-4 sm:px-5 font-[Outfit] min-h-[250px] sm:min-h-[300px] group">
+                            {/* Background image */}
+                            <img
+                                src={Images.grid_image2}
+                                alt=""
+                                className="absolute inset-0 w-full h-full object-cover z-0"
+                            />
+
+                            {/* Dark overlay */}
+                            <div className="absolute inset-0 bg-black/50 z-10 transition-all duration-300 group-hover:bg-black/60"></div>
+
+                            {/* Text content */}
+                            <div className="relative z-20">
+                                <h3 className="text-white font-[500] text-2xl sm:text-3xl lg:text-[35px] mb-1">
+                                    50+
+                                </h3>
+                                <span className="capitalize text-white font-[Poppins] text-sm sm:text-base">
+          Projects Successfully Delivered
+        </span>
+                                <p className="text-white mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base mt-3">
+                                    From startups to enterprises, we've helped businesses across industries achieve their digital goals
                                 </p>
-                                <a className={`text-white hover:underline cursor-pointer text-sm sm:text-base`}>Learn More</a>
+                                <a className="text-white hover:underline cursor-pointer text-sm sm:text-base font-semibold">
+                                    View Portfolio →
+                                </a>
                             </div>
-                        ))}
+                        </div>
+
+                        {/* === CARD 2 === */}
+                        <div className="relative overflow-hidden flex flex-col border border-[#bcd1dc] py-6 sm:py-8 px-4 sm:px-5 font-[Outfit] min-h-[250px] sm:min-h-[300px] group">
+                            {/* Background image */}
+                            <img
+                                src={Images.grid_image1}
+                                alt=""
+                                className="absolute inset-0 w-full h-full object-cover z-0"
+                            />
+
+                            {/* Dark overlay */}
+                            <div className="absolute inset-0 bg-black/50 z-10 transition-all duration-300 group-hover:bg-black/60"></div>
+
+                            {/* Text content */}
+                            <div className="relative z-20">
+                                <h3 className="text-white font-[500] text-2xl sm:text-3xl lg:text-[35px] mb-1">
+                                    15+
+                                </h3>
+                                <span className="capitalize text-white font-[Poppins] text-sm sm:text-base">
+          Countries Worldwide
+        </span>
+                                <p className="text-white mb-4 sm:mb-6 leading-6 sm:leading-7 text-sm sm:text-base mt-3">
+                                    Our global reach enables us to understand diverse markets and deliver solutions that resonate locally
+                                </p>
+                                <a className="text-white hover:underline cursor-pointer text-sm sm:text-base font-semibold">
+                                    Our Impact →
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </section>
 
-            {/*Services Section*/}
-            <section className="text-black mt-12 sm:mt-24 lg:mt-36 px-4 sm:px-6 font-[Outfit] mx-auto max-w-6xl justify-center py-8">
+            {/*Services Details Section*/}
+            <section id="services" className="text-black mt-12 sm:mt-24 lg:mt-36 px-4 sm:px-6 font-[Outfit] mx-auto max-w-6xl justify-center py-8">
                 <span className={`capitalize font-[Poppins] text-sm sm:text-base`}>Our Services</span>
                 <div className={`flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 sm:mb-12`}>
                     <h2 className="font-[Outfit] text-2xl sm:text-3xl lg:text-4xl font-[700]">
-                        We Offer a Wide <br /> Variety of IT Services
+                        Comprehensive <br /> Technology Solutions
                     </h2>
                     <button className={`bg-[#0c4d69] text-base sm:text-lg font-[500] hover:cursor-pointer text-white px-4 sm:px-6 py-2.5 rounded-lg transition-all hover:bg-[#0a3d54] whitespace-nowrap`}>
-                        ALL SERVICES
+                        View All Services
                     </button>
                 </div>
 
@@ -146,7 +209,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/*Work Processes*/}
+            {/*Work Process*/}
             <section className={`my-12 sm:my-16 lg:my-24 p-4 sm:p-6 lg:p-10`}>
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -163,15 +226,15 @@ export default function Home() {
                         <div className="order-1 lg:order-2 lg:pl-8">
                             <span className="capitalize text-[#0c4d69] font-[Poppins] text-sm sm:text-base">our process</span>
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-[700] text-[#0c4d69] font-[Outfit] mb-6 sm:mb-8 mt-2">
-                                How We Approach<br />Development Projects
+                                How We Turn Ideas<br />Into Digital Solutions
                             </h2>
 
                             <div className="mb-4 sm:mb-6 rounded-lg">
                                 <h3 className="text-[#0c4d69] text-lg sm:text-xl font-semibold font-[Outfit] mb-2">
-                                    Expert Development Team
+                                    Proven Methodology, Exceptional Results
                                 </h3>
                                 <p className="text-slate-700 font-[Outfit] text-sm sm:text-base">
-                                    Our experienced developers follow industry best practices to deliver high-quality solutions
+                                    Our agile approach ensures transparency, quality, and on-time delivery at every stage of your project
                                 </p>
                             </div>
 
@@ -198,22 +261,23 @@ export default function Home() {
             {/*Call to Action Section*/}
             <section className="w-full flex justify-center relative mb-8 sm:mb-0">
                 <div className={`bg-[#f8f8f8] w-full h-[100px] sm:h-[125px] bottom-0 absolute`}></div>
-                <div className={`h-[200px] sm:h-[250px] lg:h-[280px] z-10 overflow-hidden w-full`}>
+                <div className={`h-[200px] sm:h-[250px] lg:h-[280px] z-10 overflow-hidden w-full relative`}>
                     <img
                         src={`${Images.bg_image1}`}
                         loading="lazy"
                         alt=""
                         className="w-full h-full object-cover"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0c4d69]/95 to-[#0c4d69]/85"></div>
                 </div>
-                <div className="absolute p-4 sm:p-6 lg:p-8 text-white my-auto content-center z-20 w-[95%] sm:w-[90%] lg:w-[1000px] h-[200px] sm:h-[250px] lg:h-[280px] bg-[rgba(12,77,105,0.73)] max-w-7xl">
-                    <span className={`capitalize text-xs sm:text-sm font-[Poppins] block mb-2 sm:mb-3`}>We Carry more Than Just Good Coding Skills</span>
+                <div className="absolute p-4 sm:p-6 lg:p-8 text-white my-auto content-center z-20 w-[95%] sm:w-[90%] lg:w-[1000px] h-[200px] sm:h-[250px] lg:h-[280px] max-w-7xl">
+                    <span className={`capitalize text-xs sm:text-sm font-[Poppins] block mb-2 sm:mb-3`}>Ready to Get Started?</span>
                     <div className={`flex flex-col sm:flex-row justify-between font-[Outfit] items-start sm:items-center gap-4`}>
                         <h2 className="text-xl sm:text-2xl lg:text-4xl font-[700]">
-                            let's build your website together!
+                            Let's Build Your Next<br className="hidden sm:block" /> Digital Solution Together!
                         </h2>
-                        <button className={`border text-base sm:text-lg font-[500] hover:cursor-pointer text-white px-4 sm:px-6 py-2.5 rounded-lg transition-all hover:bg-white/10 whitespace-nowrap`}>
-                            Contact Us
+                        <button className={`border-2 border-white text-white text-base sm:text-lg font-[600] hover:cursor-pointer px-6 sm:px-8 py-2.5 rounded-lg transition-all hover:bg-white hover:text-[#0c4d69] whitespace-nowrap`}>
+                            Get Free Consultation
                         </button>
                     </div>
                 </div>
@@ -225,8 +289,11 @@ export default function Home() {
                 <div className={`pt-12 sm:pt-20 lg:pt-28 px-4`}>
                     <div className={`m-auto justify-center text-center max-w-6xl mb-8 sm:mb-12`}>
                         <span className={`text-2xl sm:text-3xl lg:text-5xl font-[600] font-[Sora] leading-tight block px-4`}>
-                            Crafting Solutions with Cutting-Edge <br className="hidden sm:block" /> Development & Design Tools
+                            Powered by Modern <br className="hidden sm:block" /> Technology Stack
                         </span>
+                        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base sm:text-lg">
+                            We leverage industry-leading tools and frameworks to build scalable, secure, and high-performance solutions
+                        </p>
                     </div>
 
                     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-7xl m-auto py-6 sm:py-8 lg:py-10`}>
@@ -251,8 +318,8 @@ export default function Home() {
                     <form id="contact-form" className="w-full lg:w-3/5 p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-5 font-[Montserrat] text-[13px]">
                         <div>
                             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Outfit] text-gray-800 mb-6 sm:mb-8 lg:mb-12">
-                                Do you have a specific inquiry?<br />
-                                <span style={{color: "#669140"}}>Reach out!</span>
+                                Ready to Start Your Project?<br />
+                                <span style={{color: "#669140"}}>Let's Talk!</span>
                             </h1>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 my-4 sm:my-5">
@@ -267,7 +334,7 @@ export default function Home() {
 
                             <textarea
                                 name="message"
-                                placeholder="Describe your need"
+                                placeholder="Tell us about your project"
                                 rows={4}
                                 className="w-full px-3 mb-4 sm:mb-5 border border-gray-300 rounded focus:outline-none font-[Montserrat] text-[13px] p-3 sm:p-4 bg-[#f8f8f8]"
                             />
@@ -289,7 +356,7 @@ export default function Home() {
                                 type="submit"
                                 className="px-4 sm:px-6 py-2 sm:py-2.5 bg-[#3a3d59] cursor-pointer text-white rounded font-[Montserrat] hover:bg-[#2a2d49] transition-all text-sm sm:text-base"
                             >
-                                Send Inquiry
+                                Send Message
                             </button>
                         </div>
                     </form>
@@ -298,16 +365,16 @@ export default function Home() {
                         <div className="text-center w-full max-w-md space-y-6 sm:space-y-8">
                             <div>
                                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
-                                    Turning big ideas into real solutions.
+                                    Let's Create Something Extraordinary
                                 </h2>
                                 <p className="text-gray-300 text-sm sm:text-base">
-                                    We're a passionate startup focused on delivering high-impact digital products that matter. Let's build something great together.
+                                    Partner with us to transform your vision into reality. We're committed to delivering innovative solutions that drive real business results.
                                 </p>
                             </div>
 
                             <div className="flex items-start justify-center space-x-3">
                                 <div className="text-left">
-                                    <p className="font-semibold text-white text-sm sm:text-base">Central One</p>
+                                    <p className="font-semibold text-white text-sm sm:text-base">Central One Technologies</p>
                                     <p className="text-xs sm:text-sm text-gray-400 leading-snug">
                                         Abuja, Nigeria
                                     </p>
