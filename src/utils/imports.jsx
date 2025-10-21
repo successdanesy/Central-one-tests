@@ -1,22 +1,19 @@
 import {Images} from "../components/images.jsx";
 
 export const navLinks = [
-   {
-        name: 'Services',
-        link: '/services',
-    },
-    {
-        name: 'Contact Us',
-        link: '/contact-us',
-    },
+
     {
         name: 'About Us',
         link: '/about-us',
     },
     {
+        name: 'Services',
+        link: '/services',
+    },
+    {
         name: 'Portfolio',
         link: '/portfolio',
-    }
+    },
 ];
 
 export const processes = [
